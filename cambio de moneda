@@ -1,0 +1,88 @@
+Algoritmo sin_titulo
+	
+	US = 922
+	CN = 715.52
+	BR = 172
+	AR = 7.06
+	EU = 932.88
+	JP = 6.71
+	Mon = 0
+	OPC = 0
+	CAM = 0
+	ot = 0
+	
+	Repetir
+		
+		Escribir "Ingrese monto a transformar"
+		leer Mon
+		Si Mon >= 1 Entonces
+			escribir "Eliga moneda a transformar"
+			escribir "1. Dolar US"
+			Mostrar "2. Dolar CN"
+			Mostrar "3. Real BR"
+			Mostrar "4. Peso AR"
+			Mostrar "5. Euro EU"
+			Mostrar "6. Yen JP"
+			Mostrar "7. Salir"
+			Leer OPC
+				
+				Segun OPC Hacer
+				
+				1:
+					CAM = MON / US
+					Imprimir "Su monto es " MON " En US Corresponde a " CAM
+					
+				2:
+					CAM = MON / CN
+					Imprimir "Su monto es " MON " En CN Corresponde a " CAM
+					
+				3:
+					
+					CAM = MON / BR
+					Imprimir "Su monto es " MON " En BR Corresponde a " CAM
+					
+				4:
+					
+					CAM = MON / AR
+					Imprimir "Su monto es " MON " En AR Corresponde a " CAM
+					
+				5:
+					CAM = MON / EU
+					Imprimir "Su monto es " MON " En EU Corresponde a " CAM
+					
+				6:
+					CAM = MON / JP
+					Imprimir "Su monto es " MON " En JP Corresponde a " CAM
+					
+				7: 
+					imprimir "Bye bye"
+					
+				De Otro Modo: 
+					
+					Imprimir "Opcion invalida"
+					
+			FinSegun
+			
+			Repetir
+				
+				Mostrar "Quiere ingresar otro monto"
+				Mostrar "1.SI"
+				Escribir  "2.NO"
+				Leer ot
+				
+				si ot > 2 Entonces
+					imprimir "Opcion invalida"
+				FinSi
+				
+			Hasta Que ot = 1 o ot = 2
+			
+		SiNo
+			Imprimir "Monto invalido"
+			
+		FinSi
+		
+	Hasta Que (ot = 2)
+
+	
+	
+FinAlgoritmo
