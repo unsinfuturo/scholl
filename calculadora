@@ -1,0 +1,123 @@
+Algoritmo sin_titulo
+
+	Repetir
+		
+		Repetir
+			
+		
+			Imprimir "------------------------------"
+			Imprimir "1.SUMA"
+			Imprimir "2.RESTA"
+			Imprimir "3.MULTIPLICACION"
+			Imprimir "4.DIVISION"
+			Imprimir "5.TABLA DE MULTIPLICAR"
+			Imprimir "6.RADIAL"
+			Imprimir "7.Salir"
+			Imprimir "------------------------------"
+			Leer opc
+			si opc < 8 y opc > 0 
+				
+			SiNo
+				Imprimir "Opcion invalida"
+				
+			FinSi
+			
+		Hasta Que opc < 8 y opc > 0 
+		
+	
+		Segun opc Hacer
+			
+			1:
+				Imprimir "ingrese numero a sumar"
+				Leer num1
+				Imprimir "ingrese siguiente numero a sumar"
+				leer num2
+				op = num1 + num2 
+				Imprimir "Su resultado es " op
+				
+			2: 
+				Imprimir "ingrese numero a restar"
+				Leer num1
+				Imprimir "ingrese siguiente numero a restar"
+				leer num2
+				op = num1 - num2 
+				Imprimir "Su resultado es " op
+				
+			3:
+				Imprimir "ingrese numero a multiplicar"
+				Leer num1
+				Imprimir "ingrese siguiente numero a multiplicar"
+				leer num2
+				op = num1 * num2 
+				Imprimir "Su resultado es " op
+				
+			4:
+				Imprimir "ingrese numero a dividir"
+				Leer num1
+				Imprimir "ingrese siguiente numero a dividir"
+				leer num2
+				op = num1 / num2 
+				Imprimir "Su resultado es " op
+				
+			5:
+				Imprimir "ingrese numero que desea para mostrar tabla"
+				Leer num1
+				m0 = 0 * num1
+				m1 = 1 * num1
+				m2 = 2 * num1
+				m3 = 3 * num1
+				m4 = 4 * num1
+				m5 = 5 * num1
+				m6 = 6 * num1
+				m7 = 7 * num1
+				m8 = 8 * num1
+				m9 = 9 * num1
+				m10 = 10 * num1
+				
+				Imprimir num1 " * 0 = " m0
+				Imprimir num1 " * 1 = " m1
+				Imprimir num1 " * 2 = " m2
+				Imprimir num1 " * 3 = " m3
+				Imprimir num1 " * 4 = " m4
+				Imprimir num1 " * 5 = " m5
+				Imprimir num1 " * 6 = " m6
+				Imprimir num1 " * 7 = " m7	
+				Imprimir num1 " * 8 = " m8
+				Imprimir num1 " * 9 = " m9
+				Imprimir num1 " * 10 = " m10
+				
+			6:
+				Imprimir "Ingresar diametro de la circunferencia"
+				Leer num1
+				op = num1 / 2
+				Imprimir "Su radio es " op
+				
+			7:
+				Imprimir "Bye bye"
+				
+		FinSegun
+		
+		Repetir
+			
+			
+			Imprimir "------------------------------"
+			Imprimir "Desea realizar otra operacion"
+			Imprimir "1.SI"
+			Imprimir "2.NO"
+			Imprimir "------------------------------"
+			Leer Res
+			si Res = 1 o Res = 2
+				
+			SiNo
+				
+				imprimir "opcion invalida"
+			FinSi
+			
+			
+		Hasta Que Res < 3 y Res > 0
+		
+		
+		
+	Hasta Que Res = 2
+	
+FinAlgoritmo
