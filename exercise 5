@@ -1,0 +1,60 @@
+Algoritmo sin_titulo
+	
+	a = 1
+	BJ= 0
+	AL= 0
+	MD= 0
+	Dimension prod[3];
+	
+	Para i=1 Hasta 3 Con Paso 1 Hacer
+		
+		Imprimir "ingrese el precio de el producto n°", i
+		leer prod[i]
+		
+		si a = 1 Entonces
+			
+			AL = prod[i]
+			BJ = prod[i]
+			a = 0
+			
+		FinSi
+		
+		si prod[i] > BJ y prod[i] < AL Entonces
+			
+			MD = prod[i]
+			
+		FinSi
+		
+		si prod[i] > AL Entonces
+			
+			si AL > MD Entonces
+				
+				MD = AL
+				
+			FinSi
+			
+			AL = prod[i]
+			
+		SiNo
+			
+			si prod[i] < BJ Entonces
+				
+				BJ = prod[i]
+				
+				si prod[i] > MD Entonces
+					
+					MD = prod[i]
+					
+				FinSi
+				
+			FinSi
+			
+		FinSi
+		
+	FinPara
+	
+	Imprimir AL
+	Imprimir MD
+	Imprimir BJ
+
+FinAlgoritmo
