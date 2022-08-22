@@ -1,0 +1,43 @@
+Algoritmo sin_titulo
+	
+	Imprimir "ingrese un numero"
+	leer num
+	enter = trunc[num]
+	
+	si num = 0 Entonces
+		Imprimir "Neutro"
+		
+	SiNo
+		
+		si num > 0 Entonces
+			Imprimir "Positivo"
+			
+		SiNo
+			
+			Imprimir "Negativo"
+			
+		FinSi
+		
+	FinSi
+	
+	si enter mod 2 = 0  Entonces
+		
+		Imprimir "Par"
+		
+	SiNo
+		
+		Imprimir "Inpar"
+		
+		
+	FinSi
+	
+	si num - trunc[num] = 0 Entonces
+		
+		Imprimir "Entero"
+	SiNo
+		
+		Imprimir "Decimal"
+		
+	FinSi
+	
+FinAlgoritmo
