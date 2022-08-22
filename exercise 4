@@ -1,0 +1,24 @@
+Algoritmo sin_titulo
+	
+	
+	Repetir
+		
+		Imprimir "Ingrese edad"
+		leer edad
+		
+	Hasta Que edad > 0
+	
+	
+	
+	
+	si edad >= 18 Entonces
+		
+		Imprimir "Mayor de edad"
+		
+	SiNo
+		
+		Imprimir "Menor de edad"
+		
+	FinSi
+	
+FinAlgoritmo
