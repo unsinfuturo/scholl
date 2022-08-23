@@ -1,0 +1,35 @@
+Algoritmo sintitulo
+	
+	Imprimir "Ingrese primer numero"
+	Leer num1
+	Imprimir "Ingrese seguiente numero"
+	leer num2
+	Imprimir "--------------------------------"
+	Imprimir "Selecione operacion Arigmetica"
+	Imprimir "1. Suma"
+	Imprimir "2. Resta"
+	Imprimir "3. Multiplicacion"
+	Imprimir "4. Division"
+	leer opc
+	
+	Segun opc
+		
+		1:
+			res = num1 + num2
+			
+		2:
+			res = num1 - num2
+			
+		3: 
+			res = num1 * num2
+			
+		4:
+			res = num1 / num2
+		
+	FinSegun
+	
+	Imprimir "-------------------------------"
+	Imprimir "El resultado es ", res
+	
+FinAlgoritmo
+	
