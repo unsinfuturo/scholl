@@ -1,0 +1,42 @@
+Algoritmo sin_titulo
+	
+	Imprimir "Ingrese el largo de el arreglo"
+	leer n
+	
+	Dimension was[n]
+	k = 0
+	
+	Mientras k <= n - 1
+		
+		Imprimir "Ingrese numero  ", k + 1 
+		Leer was[k]
+		k = k + 1
+		
+	FinMientras
+	
+	
+	k = 0
+	
+	Mientras K <= n - 2
+		j = k + 1
+		Mientras  j <= n - 1
+			
+			si was[k]< was[j] Entonces
+				aux = was[k]
+				was[k] = was[j]
+				was[j] = aux
+				
+			FinSi
+			
+			j = j + 1
+			
+		FinMientras
+		
+		k = k + 1
+	FinMientras
+	
+	Para k = 0 hasta n - 1 Con Paso  1 Hacer
+		Imprimir  was[k] 
+	FinPara
+	
+FinAlgoritmo
