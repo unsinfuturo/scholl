@@ -1,0 +1,58 @@
+Algoritmo sintitulo
+	num = 1
+	
+	
+	Mientras num < 100 Hacer
+		
+		Imprimir "Seleccione sexo de el trabajador n°",num
+		Imprimir "1. Hombre"
+		Imprimir "2. Mujer"
+		leer SEX
+		Imprimir "Ingrese edad de el trabajador"
+		leer edad
+		Imprimir "Ingrese sueldo de el trabajador"
+		Leer Sue
+		
+		si SEX = 1 Entonces
+			
+			H_T = H_T + 1
+			Ed_H = edad + Ed_H
+			Sue_H = Sue_H+ Sue
+			
+		SiNo
+			
+			M_T = M_T + 1
+			Ed_M = edad + Ed_M
+			Sue_M = Sue_M + Sue
+			
+		FinSi
+		
+		num = num + 1
+		
+		Imprimir "Quiere ingresar otro numero"
+		leer aaa
+		
+		si aaa = "SI" Entonces
+			num = 100
+		FinSi
+		
+	FinMientras
+	
+	P_H = (H_T * 100)/ (H_T + M_T)
+	P_M = (M_T * 100)/ (H_T + M_T)
+	Sue_H_T = Sue_H / H_T
+	Sue_M_T = Sue_M / M_T
+	Ed_H_T = Ed_H / H_T
+	Ed_M_T = Ed_M / M_T
+	
+	Imprimir "-------------------------------------------------"
+	Imprimir "El porcentaje de hombres es de el ", P_H, "%"
+	Imprimir "El porcentaje de mujeres es de el ", P_M, "%"
+	Imprimir "-------------------------------------------------"
+	Imprimir "El promedio de el sueldo de los hombres es de ", Sue_H_T
+	Imprimir "El promedio de el sueldo de las mujeres es de ", Sue_M_T
+	Imprimir "-------------------------------------------------"
+	Imprimir "El promedio de edad de los hombres es de ",Ed_H_T
+	Imprimir "El promedio de edad de las mujeres es de ",Ed_M_T
+	
+FinAlgoritmo
