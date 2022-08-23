@@ -1,0 +1,42 @@
+Algoritmo sin_titulo
+	
+	Imprimir "Ingrese nombre de el producto"
+	Leer name
+	
+	Repetir
+		
+		Imprimir "Ingrese precio de el producto"
+		leer pre
+		
+	Hasta Que  pre > 0
+
+	
+	si pre > 500000 Entonces
+		
+		pre = pre - (pre * 0.5)
+		
+	SiNo
+		
+		si pre > 100000 Entonces
+			
+			pre = pre - (pre * 0.3)
+			
+		SiNo
+			
+			si pre > 50000 Entonces
+				
+				pre = pre - (pre * 0.2)
+				
+			FinSi
+			
+		FinSi
+		
+	FinSi
+	
+	Imprimir "---------------------------------------"
+	Imprimir name
+	Imprimir "El precio final de el producto es ", pre
+	
+	
+	
+FinAlgoritmo
