@@ -1,0 +1,92 @@
+Algoritmo sintitulo
+	num2 = 0
+	num = 0
+	Imprimir "Adivina el precio"
+	Imprimir "---------------------------------------"
+	
+	opc = azar(6)
+	
+	segun opc
+		
+		1:
+			name = "Nvidia Evga FTW3 Ultra Gaming GeForce RTX 30 Series RTX 3070 Ti"
+			pre = 1189990
+			
+		2:
+			name = "Procesador Intel® Core i9-9900K"
+			pre = 549990
+			
+		3:
+			name = "Manta Shrek Meme"
+			pre = 6616
+			
+		4:
+			name = "Pistola Smith & Wesson mod. M1911 ( En euros )"
+			pre = 2513
+			
+		5:
+			name = "Cuerda Yute Torcido 40 Mm X Metro"
+			pre = 3990
+			
+		6: 
+			name = "Arduino Uno R3"
+			pre = 16990
+			
+		0:  
+			name = "todos los dlcs de los sims 4"
+			pre = 761200
+			
+	FinSegun
+	
+	Imprimir name
+	
+	Mientras num < 11 Hacer
+		e = 10 - num2
+		Imprimir "----------------------------"
+		Imprimir "Tienes ", e, " intentos"
+		
+		si num = 9 Entonces
+			Imprimir "----------------------------"
+			Imprimir "Ultimo intento"
+			Imprimir "Suerte"
+			Imprimir "----------------------------"
+		FinSi
+		
+		si num < 10 Entonces
+			
+			Imprimir "Adivina el valor de ", name
+			leer ad
+			
+			si ad = pre Entonces
+				Imprimir "Ganaste"
+				Imprimir "El valor era ", pre
+				num = 12
+				
+			SiNo
+				
+				si ad > pre Entonces
+					imprimir "El precio es menor"
+					num = num + 1
+					num2 = num2 + 1
+				SiNo
+					
+					Imprimir "El precio es mayor"
+					num = num + 1
+					num2 = num2 + 1
+				FinSi
+				
+			FinSi
+			
+		SiNo
+			
+			Imprimir "----------------------------"
+			Imprimir "Fallaste"
+			Imprimir "El valor era ", pre
+			num = num + 1
+			
+		FinSi
+	FinMientras
+
+
+	
+FinAlgoritmo
