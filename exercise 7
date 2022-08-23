@@ -1,0 +1,78 @@
+Algoritmo sintutulo
+		
+		US = 786.05
+		JP = 7.19
+		EU = 921.76
+		LB = 1073.84
+		RL = 149.14
+		
+		
+		Repetir
+			
+			Escribir "Ingrese monto a transformar"
+			leer Mon
+			Si Mon >= 1 Entonces
+				escribir "Eliga moneda a transformar"
+				escribir "1. Dolar"
+				Mostrar "2. Yen "
+				Mostrar "3. Euro "
+				Mostrar "4. Libra "
+				Mostrar "5. Real "
+				Mostrar "6. Salir"
+				Leer OPC
+				
+				Segun OPC Hacer
+					
+					1:
+						CAM = MON / US
+						Imprimir "Su monto es " MON " En Dolar Corresponde a " CAM
+						
+					2:
+						CAM = MON / JP
+						Imprimir "Su monto es " MON " En Yen Corresponde a " CAM
+						
+					3:
+						
+						CAM = MON / EU
+						Imprimir "Su monto es " MON " En Euro Corresponde a " CAM
+						
+					4:
+						
+						CAM = MON / LB
+						Imprimir "Su monto es " MON " En Libra Corresponde a " CAM
+						
+					5:
+						CAM = MON / RL
+						Imprimir "Su monto es " MON " En Real Corresponde a " CAM
+						
+					6: 
+						imprimir "Bye bye"
+						
+					De Otro Modo: 
+						
+						Imprimir "Opcion invalida"
+						
+				FinSegun
+				
+				Repetir
+					
+					Mostrar "Desea ingresar otro monto"
+					Mostrar "1.SI"
+					Escribir  "2.NO"
+					Leer ot
+					
+					si ot > 2 Entonces
+						imprimir "Opcion invalida"
+					FinSi
+					
+				Hasta Que ot = 1 o ot = 2
+				
+			SiNo
+				Imprimir "Monto invalido"
+				
+			FinSi
+			
+		Hasta Que (ot = 2)
+		
+		
+	FinAlgoritmo
