@@ -1,0 +1,55 @@
+Algoritmo sintitulo
+	
+	Repetir
+		
+		Imprimir "Ingresar numero de comensales"
+		leer per
+		
+	Hasta Que per > 0
+	
+	si per < 50 Entonces
+		opc = 1
+		
+	SiNo
+		
+		si per < 100 Entonces
+			opc = 2
+			
+		SiNo
+			
+			si per < 200 Entonces
+				opc = 3
+				
+			SiNo				
+				opc = 4
+				
+			FinSi
+			
+		FinSi
+		
+	FinSi
+	
+	Imprimir "Menus pedidos"
+	leer num
+	
+	segun opc Hacer
+		
+		1: 
+			res = 19500 * num
+			
+		2:
+			res = 17000 * num
+			
+		3:
+			res = 15500 * num
+			
+		4:
+			res = 13500 * num
+			
+			
+	FinSegun
+	
+	Imprimir "El precio total es de ", res
+	
+	
+FinAlgoritmo
