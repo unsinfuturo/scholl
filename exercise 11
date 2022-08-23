@@ -1,0 +1,38 @@
+Algoritmo sintitulo
+	
+	Dimension name[3];
+	Dimension sue[3];
+	Dimension liq[3];
+	Dimension des[3];
+	afp = 0.1135
+	fon = 0.07
+	afc = 0.006
+	cont = 0
+	
+	Para i=1 Hasta 3 Con Paso 1 Hacer
+		
+		Imprimir "ingrese nombre de trabajador"
+		leer name[i]
+		Imprimir "ingrese sueldo"
+		Leer sue[i]
+		afp_D = sue[i] * 0.1135
+		fon_D = sue[i] * 0.07
+		afc_D = sue[i] * 0.006
+		Des[i] = + afp_D + fon_D + afc_D
+		Liq[i] = sue[i] - afp_D - fon_D - afc_D
+		Des_T = Des[i] + Des_T
+		Liq_T = Liq[i] + Liq_T
+		
+	Fin Para
+	
+	Imprimir name[1], " liquidación ", liq[1]
+	Imprimir "--------------------------------------------------------"
+	Imprimir name[2], " liquidación ", liq[2]
+	Imprimir "--------------------------------------------------------"
+	Imprimir name[3], " liquidación ", liq[3]
+	Imprimir "--------------------------------------------------------"
+	Imprimir "Descuento total ", Des_T
+	Imprimir "--------------------------------------------------------"
+	Imprimir "Liquidacion total ", Liq_T
+	
+FinAlgoritmo
