@@ -57,6 +57,8 @@ Algoritmo sintitulo
 			Imprimir "Adivina el valor de ", name
 			leer ad
 			
+			pro = (ad * 100)/pre
+			
 			si ad = pre Entonces
 				Imprimir "Ganaste"
 				Imprimir "El valor era ", pre
@@ -68,11 +70,14 @@ Algoritmo sintitulo
 					imprimir "El precio es menor"
 					num = num + 1
 					num2 = num2 + 1
+					Imprimir "El valor que colocaste corresponde al " , pro,"% de el precio total"
 				SiNo
 					
 					Imprimir "El precio es mayor"
 					num = num + 1
 					num2 = num2 + 1
+					Imprimir "El valor que colocaste corresponde al " , pro,"% de el precio total"
+					
 				FinSi
 				
 			FinSi
@@ -86,7 +91,6 @@ Algoritmo sintitulo
 			
 		FinSi
 	FinMientras
-
-
 	
-FinAlgoritmo
+	
+	
