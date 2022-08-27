@@ -7,7 +7,7 @@ Algoritmo excercise15
 		Repetir
 			
 			
-			Imprimir "Ingrese sueldo de el trabajador n° ", i 
+			Imprimir "Ingrese sueldo de el trabajador nÂ° ", i 
 			leer tra[i]
 			
 			si tra[i] < 50 Entonces
@@ -93,15 +93,15 @@ Algoritmo excercise15
 		FinSi
 		
 		Imprimir "---------------------------------------------------------------------------"
-		Imprimir "Trabajador n°", i
+		Imprimir "Trabajador nÂ°", i
 		Imprimir "El numero de billetes de $20000 es ", num1
 		Imprimir "El numero de billetes de $10000 es ", num2
 		Imprimir "El numero de billetes de $5000 es ", num3
 		Imprimir "El numero de billetes de $2000 es ", num4
 		Imprimir "El numero de billetes de $1000 es ", num5
-		Imprimir "El numero de billetes de $500 es ", num6
-		Imprimir "El numero de billetes de $100 es ", num7
-		Imprimir "El numero de billetes de $50 es ", num8
+		Imprimir "El numero de monedas de $500 es ", num6
+		Imprimir "El numero de monedas de $100 es ", num7
+		Imprimir "El numero de monedas de $50 es ", num8
 	FinPara
 	
 	
