@@ -6,9 +6,16 @@ Algoritmo excercise15
 		
 		Repetir
 			
+			Repetir
+				Imprimir "Ingrese sueldo de el trabajador n° ", i 
+				leer tra[i]
+				
+				si tra[i] < 1 Entonces
+					Imprimir "Valor invalido"
+				FinSi
+				
+			Hasta Que tra[i] > 0 
 			
-			Imprimir "Ingrese sueldo de el trabajador nÂ° ", i 
-			leer tra[i]
 			
 			si tra[i] < 50 Entonces
 				
@@ -39,61 +46,62 @@ Algoritmo excercise15
 		si numa >= 20000
 			
 			num1 = trunc[numa / 20000]
-			numa = numa - (numa*num1)
+			numa = numa - (20000*num1)
 			
 		FinSi
 		
 		si numa >= 10000
 			
 			num2 = trunc[numa / 10000]
-			numa =  numa - (numa*num2)
+			numa =  numa - (10000*num2)
 			
 		FinSi
 		
 		si numa >= 5000
 			
 			num3 = trunc[numa / 5000]
-			numa =  numa - (numa*num3)
+			numa =  numa - (5000*num3)
 			
 		FinSi
 		
 		si numa >= 2000
 			
 			num4 = trunc[numa / 2000]
-			numa =  numa - (numa*num4)
+			numa =  numa - (2000*num4)
 			
 		FinSi
 		
 		si numa >= 1000
 			
 			num5 = trunc[numa / 1000]
-			numa =  numa - (numa*num5)
+			numa =  numa - (1000*num5)
 			
 		FinSi
 		
 		si numa >= 500
 			
 			num6 = trunc[numa / 500]
-			numa = numa - (numa*num6)
+			numa = numa - (500*num6)
 			
 		FinSi
 		
 		si numa >= 100
 			
 			num7 = trunc[numa / 100]
-			numa = numa - (numa*num7)
+			numa = numa - (100*num7)
 			
 		FinSi
 		
 		si numa >= 50
 			
 			num8 = trunc[numa / 50]
-			numa = numa - (numa*num8)
+			numa = numa - (50*num8)
 			
 		FinSi
 		
 		Imprimir "---------------------------------------------------------------------------"
-		Imprimir "Trabajador nÂ°", i
+		Imprimir "Trabajador n°", i
+		Imprimir "Sueldo: ", tra[i]
 		Imprimir "El numero de billetes de $20000 es ", num1
 		Imprimir "El numero de billetes de $10000 es ", num2
 		Imprimir "El numero de billetes de $5000 es ", num3
