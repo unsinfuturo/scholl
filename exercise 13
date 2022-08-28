@@ -4,7 +4,7 @@ Algoritmo sin_titulo
 	Leer num
 	
 	
-	Para i=1 Hasta 10 Con Paso 1 Hacer
+	Para i=num Hasta 0  Hacer
 		
 		num = num - 1
 		

@@ -2,16 +2,46 @@ Algoritmo sintitulo
 	num = 1
 	
 	
-	Mientras num < 100 Hacer
+	Mientras num < 101 Hacer
 		
-		Imprimir "Seleccione sexo de el trabajador nÂ°",num
-		Imprimir "1. Hombre"
-		Imprimir "2. Mujer"
-		leer SEX
-		Imprimir "Ingrese edad de el trabajador"
-		leer edad
-		Imprimir "Ingrese sueldo de el trabajador"
-		Leer Sue
+		Repetir
+			Imprimir "Seleccione sexo de el trabajador n°",num
+			Imprimir "1. Hombre"
+			Imprimir "2. Mujer"
+			leer SEX
+			
+			si SEX > 2 o SEX < 1
+				Imprimir "Opcion invalida"
+			FinSi
+
+		Hasta Que  SEX = 1 o SEX = 2
+		
+		Repetir
+			
+			Imprimir "Ingrese edad de el trabajador"
+			leer edad
+			
+			si edad < 1 o trunc(edad) - edad <> 0 Entonces
+				
+				Imprimir "Edad invalida"
+				
+			FinSi
+			
+		Hasta Que edad > 0 y trunc(edad) - edad = 0
+		
+		Repetir
+			
+			Imprimir "Ingrese sueldo de el trabajador"
+			Leer Sue
+			
+			si Sue < 1 Entonces
+				
+				Imprimir "Valor invalido"
+				
+			FinSi
+			
+		Hasta Que Sue > 0
+		
 		
 		si SEX = 1 Entonces
 			
@@ -33,17 +63,24 @@ Algoritmo sintitulo
 		leer aaa
 		
 		si aaa = "SI" Entonces
-			num = 100
+			num = 101
 		FinSi
 		
 	FinMientras
 	
 	P_H = (H_T * 100)/ (H_T + M_T)
 	P_M = (M_T * 100)/ (H_T + M_T)
-	Sue_H_T = Sue_H / H_T
-	Sue_M_T = Sue_M / M_T
-	Ed_H_T = Ed_H / H_T
-	Ed_M_T = Ed_M / M_T
+	
+	si H_T > 0 Entonces
+		Sue_H_T = Sue_H / H_T
+		Ed_H_T = Ed_H / H_T
+	FinSi
+	si M_T > 0 Entonces
+		Sue_M_T = Sue_M / M_T
+		Ed_M_T = Ed_M / M_T
+	FinSi
+	
+
 	
 	Imprimir "-------------------------------------------------"
 	Imprimir "El porcentaje de hombres es de el ", P_H, "%"
