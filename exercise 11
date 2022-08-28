@@ -1,5 +1,7 @@
 Algoritmo sintitulo
 	
+	na = 0
+	
 	Dimension name[3];
 	Dimension sue[3];
 	Dimension liq[3];
@@ -33,13 +35,12 @@ Algoritmo sintitulo
 		
 	Fin Para
 	
-	Mientras  i > 3 Hacer
-		i = i + 1
-		Imprimir name[i], " liquidación ", liq[i]
+	Mientras  na < 3 Hacer
+		na = na + 1
+		Imprimir "La liquidación de ",name[na]," es de ",liq[na]
 		Imprimir "--------------------------------------------------------"
 	FinMientras
 	
-	Imprimir "--------------------------------------------------------"
 	Imprimir "Descuento total ", Des_T
 	Imprimir "--------------------------------------------------------"
 	Imprimir "Liquidacion total ", Liq_T
