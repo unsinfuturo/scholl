@@ -12,10 +12,10 @@ Algoritmo exercise18
 	
 	Repetir
 		
-		Imprimir "Ingresar altura M. de estudiante n°", i
+		Imprimir "Ingresar altura M. de estudiante nÂ°", i
 		leer al[i]
 		
-		Imprimir "Ingrese Peso kg. de estudiante n°", i
+		Imprimir "Ingrese Peso kg. de estudiante nÂ°", i
 		leer pe[i]
 		
 		Imprimir "Ingrese sexo de el estudiante"
@@ -79,7 +79,7 @@ Algoritmo exercise18
 					
 				SiNo
 					
-					si imc < 34.9 Entonces
+					si imc > 29.9 Entonces
 						
 						obe = obe + 1
 						
