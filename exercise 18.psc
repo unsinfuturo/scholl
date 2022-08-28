@@ -12,16 +12,24 @@ Algoritmo exercise18
 	
 	Repetir
 		
-		Imprimir "Ingresar altura M. de estudiante nÂ°", i
+		Imprimir "Ingresar altura M. de estudiante n°", i
 		leer al[i]
 		
-		Imprimir "Ingrese Peso kg. de estudiante nÂ°", i
+		Imprimir "Ingrese Peso kg. de estudiante n°", i
 		leer pe[i]
 		
-		Imprimir "Ingrese sexo de el estudiante"
-		Imprimir "1.Hombre"
-		Imprimir "2.Mujer"
-		leer Sx
+		Repetir
+			
+			Imprimir "Ingrese sexo de el estudiante"
+			Imprimir "1.Hombre"
+			Imprimir "2.Mujer"
+			leer Sx
+			
+			si Sx > 2 o Sx < 1
+				Imprimir "Opcion invalida"
+			FinSi
+			
+		Hasta Que Sx < 3 y Sx > 0 
 		
 		i = i + 1
 		
