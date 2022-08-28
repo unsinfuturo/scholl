@@ -4,18 +4,36 @@ Algoritmo sin_titulo
 	Leer num
 	
 	
-	Para i=num Hasta 0  Hacer
+	Para i=num Hasta 0 Hacer
 		
-		num = num - 1
+
 		
-		si num mod 2 = 1 Entonces
+		si num > 0 Entonces
 			
-			Imprimir num
+			num = num - 1
 			
-		SiNo
+			si num mod 2 = 1 Entonces
+				
+				Imprimir num
+				
+			SiNo
+				
+			FinSi
+
+		FinSi
+	
+		si num < 0 Entonces
+			num = num + 1
+			
+			si num mod 2 = -1 Entonces
+				
+				Imprimir num
+				
+			SiNo
+				
+			FinSi
 			
 		FinSi
-		
 	FinPara
 	
 	
