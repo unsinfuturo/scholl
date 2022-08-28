@@ -99,6 +99,20 @@ Algoritmo excercise15
 			
 		FinSi
 		
+		si numa >= 10
+			
+			num9 = trunc[numa / 10]
+			numa = numa - (10*num9)
+			
+		FinSi
+		
+		si numa >= 1
+			
+			num10 = trunc[numa / 10]
+			numa = numa - (10*num10)
+			
+		FinSi
+		
 		Imprimir "---------------------------------------------------------------------------"
 		Imprimir "Trabajador n°", i
 		Imprimir "Sueldo: ", tra[i]
@@ -110,6 +124,8 @@ Algoritmo excercise15
 		Imprimir "El numero de monedas de $500 es ", num6
 		Imprimir "El numero de monedas de $100 es ", num7
 		Imprimir "El numero de monedas de $50 es ", num8
+		Imprimir "El numero de monedas de $10 es ", num9
+		Imprimir "El numero de monedas de $1 es ", num10
 	FinPara
 	
 	
