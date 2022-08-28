@@ -23,6 +23,7 @@ Algoritmo sin_titulo
 		FinSi
 	
 		si num < 0 Entonces
+			
 			num = num + 1
 			
 			si num mod 2 = -1 Entonces
