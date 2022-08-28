@@ -13,8 +13,16 @@ Algoritmo sintitulo
 		
 		Imprimir "ingrese nombre de trabajador"
 		leer name[i]
-		Imprimir "ingrese sueldo"
-		Leer sue[i]
+		Repetir
+			Imprimir "ingrese sueldo"
+			Leer sue[i]
+			
+			si sue[i] < 1 o trunc(sue[i]) - sue[i] <> 0 Entonces
+				Imprimir "Valor invalido"
+			FinSi
+			
+		Hasta Que sue[i] > 0 y trunc(sue[i]) - sue[i] = 0
+	
 		afp_D = sue[i] * 0.1135
 		fon_D = sue[i] * 0.07
 		afc_D = sue[i] * 0.006
@@ -25,11 +33,12 @@ Algoritmo sintitulo
 		
 	Fin Para
 	
-	Imprimir name[1], " liquidación ", liq[1]
-	Imprimir "--------------------------------------------------------"
-	Imprimir name[2], " liquidación ", liq[2]
-	Imprimir "--------------------------------------------------------"
-	Imprimir name[3], " liquidación ", liq[3]
+	Mientras  i > 3 Hacer
+		i = i + 1
+		Imprimir name[i], " liquidaci�n ", liq[i]
+		Imprimir "--------------------------------------------------------"
+	FinMientras
+	
 	Imprimir "--------------------------------------------------------"
 	Imprimir "Descuento total ", Des_T
 	Imprimir "--------------------------------------------------------"

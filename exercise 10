@@ -13,7 +13,7 @@ Algoritmo sintitulo
 			pre = 1189990
 			
 		2:
-			name = "Procesador IntelÂ® Core i9-9900K"
+			name = "Procesador Intel® Core i9-9900K"
 			pre = 549990
 			
 		3:
@@ -58,6 +58,7 @@ Algoritmo sintitulo
 			leer ad
 			
 			pro = (ad * 100)/pre
+			pro = redon(pro)
 			
 			si ad = pre Entonces
 				Imprimir "Ganaste"
@@ -92,5 +93,6 @@ Algoritmo sintitulo
 		FinSi
 	FinMientras
 	
-	
+FinAlgoritmo
+
 	

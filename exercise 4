@@ -6,7 +6,13 @@ Algoritmo sin_titulo
 		Imprimir "Ingrese edad"
 		leer edad
 		
-	Hasta Que edad > 0
+		si edad < 1 o trunc(edad) - edad <> 0 Entonces
+			
+			Imprimir "Edad invalida"
+			
+		FinSi
+		
+	Hasta Que edad > 0 y trunc(edad) - edad = 0
 	
 	
 	

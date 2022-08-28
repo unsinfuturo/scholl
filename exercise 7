@@ -24,25 +24,25 @@ Algoritmo sintutulo
 				Segun OPC Hacer
 					
 					1:
-						CAM = MON / US
+						CAM = redon(MON / US)
 						Imprimir "Su monto es " MON " En Dolar Corresponde a " CAM
 						
 					2:
-						CAM = MON / JP
+						CAM = redon(MON / JP)
 						Imprimir "Su monto es " MON " En Yen Corresponde a " CAM
 						
 					3:
 						
-						CAM = MON / EU
+						CAM = redon(MON / EU)
 						Imprimir "Su monto es " MON " En Euro Corresponde a " CAM
 						
 					4:
 						
-						CAM = MON / LB
+						CAM = redon(MON / LB)
 						Imprimir "Su monto es " MON " En Libra Corresponde a " CAM
 						
 					5:
-						CAM = MON / RL
+						CAM = redon(MON / RL)
 						Imprimir "Su monto es " MON " En Real Corresponde a " CAM
 						
 					6: 
@@ -61,7 +61,7 @@ Algoritmo sintutulo
 					Escribir  "2.NO"
 					Leer ot
 					
-					si ot > 2 Entonces
+					si ot > 2 o ot < 1 Entonces
 						imprimir "Opcion invalida"
 					FinSi
 					
