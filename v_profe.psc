@@ -24,25 +24,26 @@ Algoritmo campeonato_nacional_plan_vital
 				
 				Para i=0 Hasta 15 Con Paso 1 Hacer
 					
-					imprimir "Ingrese equipo nÂ°", i + 1
+					imprimir "Ingrese equipo n°", i + 1
 					Leer Team[i];
 					
 				FinPara
-				
 				
 			2:
 				
 				Para j=0 Hasta 15 Con Paso 1 Hacer
 					
-					Imprimir "Ingrese resultados de los partidos de local"
+					Imprimir "Ingrese resultados de los partidos de local de el equipo ", Team[j]
 					Imprimir "--------------------------------------------"
 					
-					Para k= j + 1 Hasta 15 Con Paso 1 Hacer
+					Para k =0 Hasta 15 Con Paso 1 Hacer
 						
-						si j = 0 Entonces
+						si j <> k Entonces
 							
+							Imprimir "--------------------------------------------"
 							Imprimir Team[j], " vs ", Team[k]
 							Imprimir "--------------------------------------------"
+							Imprimir ""
 							Escribir "Ingrese los goles de ", Team[j];
 							Leer point
 							Escribir "Ingrese los goles de ", Team[k];
@@ -57,12 +58,10 @@ Algoritmo campeonato_nacional_plan_vital
 								si point = vs_point Entonces
 									
 									punt[j] = punt[j] + 1
-					
 									
 								SiNo
 									
-									punt[j] = punt[j] + 0
-							
+									punt[j] = punt[j] - 1
 									
 								FinSi
 								
@@ -75,6 +74,84 @@ Algoritmo campeonato_nacional_plan_vital
 					
 				FinPara
 				
+				Para i=0 Hasta 15 Con Paso 1 Hacer
+					Imprimir team[i], " ", punt[i]
+				FinPara
+				
+			3:	
+				
+				Para j=0 Hasta 15 Con Paso 1 Hacer
+					
+					Imprimir "Ingrese resultados de los partidos de visita de el equipo ", Team[j]
+					Imprimir "--------------------------------------------"
+					
+					Para k =0 Hasta 15 Con Paso 1 Hacer
+						
+						si j <> k Entonces
+							
+							Imprimir "--------------------------------------------"
+							Imprimir Team[j], " vs ", Team[k]
+							Imprimir "--------------------------------------------"
+							Imprimir ""
+							Escribir "Ingrese los goles de ", Team[j];
+							Leer point
+							Escribir "Ingrese los goles de ", Team[k];
+							Leer vs_point
+							
+							si point > vs_point Entonces
+								
+								punt[j] = punt[j] + 3
+								
+							SiNo
+								
+								si point = vs_point Entonces
+									
+									punt[j] = punt[j] + 1
+									
+								SiNo
+									
+									punt[j] = punt[j] - 1
+									
+								FinSi
+								
+								
+							FinSi
+							
+						FinSi
+						
+					FinPara
+					
+				FinPara
+				
+			4:
+				
+				k=0
+				
+				Mientras K <= 14
+					j = k + 1
+					Mientras  j <= 15
+						
+						si punt[k]< punt[j] Entonces
+							aux = punt[k]
+							punt[k] = punt[j]
+							punt[j] = aux
+							
+							wa = Team[k]
+							Team[k] = Team[j]
+							Team[j] = wa
+							
+						FinSi
+						
+						j = j + 1
+						
+					FinMientras
+					
+					k = k + 1
+				FinMientras
+				
+				Para k = 0 hasta 15 Con Paso  1 Hacer
+					Imprimir Team[k] " ", punt[k] 
+				FinPara
 				
 		FinSegun
 		
