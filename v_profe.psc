@@ -150,8 +150,36 @@ Algoritmo campeonato_nacional_plan_vital
 				FinMientras
 				
 				Para k = 0 hasta 15 Con Paso  1 Hacer
-					Imprimir Team[k] " ", punt[k] 
+					Imprimir "Equipo: ",Team[k] " Puntos: ", punt[k] 
 				FinPara
+				
+			5:
+				Imprimir "--------------------------------------------"
+				Imprimir "El equipo campeon es"
+				Imprimir Team[0];
+				Imprimir "--------------------------------------------"
+				Imprimir "Equipos descendientes"
+				Imprimir Team[14];
+				Imprimir Team[15];
+				Imprimir "--------------------------------------------"
+				
+			6:
+				Imprimir "--------------------------------------------"
+				Imprimir "Copa libertadores"
+				Imprimir Team[0];
+				Imprimir Team[1];
+				Imprimir Team[2];
+				Imprimir "--------------------------------------------"
+				
+			7:
+				
+				Imprimir "--------------------------------------------"
+				Imprimir "Copa Sudamerica"
+				Imprimir Team[3];
+				Imprimir Team[4];
+				Imprimir Team[5];
+				Imprimir Team[6];
+				Imprimir "--------------------------------------------"
 				
 		FinSegun
 		
