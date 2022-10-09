@@ -22,7 +22,7 @@ Algoritmo sin_titulo
 		Imprimir "--------------------------------------------------"
 		
 		Imprimir "Ingrese nombre"
-		Leer nomCliente[j]
+		
 		Imprimir "Ingrese apellido"
 		leer apeCliente[j]
 		Imprimir "Ingrese Run"
@@ -312,6 +312,6 @@ Algoritmo sin_titulo
 			
 		Hasta Que resVolver = 2
 		
-	Hasta Que repeticion > 5
+	Hasta Que j > 4
 	
 FinAlgoritmo
