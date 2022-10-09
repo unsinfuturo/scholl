@@ -197,9 +197,9 @@ Algoritmo sin_titulo
 					
 					
 				2:
-					Imprimir nomCliente[j];
-					Imprimir apeCliente[j];
-					Imprimir run[j];
+					Imprimir "Nombre: ", nomCliente[j];
+					Imprimir "Apellido: ",apeCliente[j];
+					Imprimir "Run: ",run[j];
 					Imprimir "Credito Solicitado: $",credSolicitado[j];
 					Segun numCuota[j]
 						
