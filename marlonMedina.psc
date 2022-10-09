@@ -24,11 +24,11 @@ Algoritmo sin_titulo
 		Imprimir "--------------------------------------------------"
 		
 		Imprimir "Ingrese nombre"
-		Leer nomCliente[i]
+		Leer nomCliente[j]
 		Imprimir "Ingrese apellido"
-		leer apeCliente[i]
+		leer apeCliente[j]
 		Imprimir "Ingrese Run"
-		leer run[i]
+		leer run[j]
 		
 		repetir
 			
@@ -251,9 +251,17 @@ Algoritmo sin_titulo
 							Imprimir "Valor total del credito: $", redon((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.5)
 							
 					FinSegun
+					
 				3:
+					Para i = 0 Hasta 4 Hacer
+						Imprimir "------------------------------------------"
+						Imprimir "Nombre y apellido: ",nomCliente[i]," ", apeCliente[i]
+						Imprimir "RUT: ", run[i]
+						Imprimir "--------------------------------------------"
+					FinPara
 					
 				4:
+					
 					
 			FinSegun
 			
