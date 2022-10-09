@@ -1,10 +1,8 @@
 Algoritmo sin_titulo
 	
-	Definir opcMenu,opcCredito,sue,opcCuota,numCuota,valorCredito Como Entero
+	Definir opcMenu,opcCredito,sue,opcCuota,numCuota,valorCredito,opcBuscar Como Entero
 	Definir nomCliente, apeCliente, Run Como Caracter
 	
-	
-	Dimension tipoCredito[5];
 	Dimension nomCliente[5];
 	Dimension apeCliente[5];
 	Dimension credSolicitado[5];
@@ -46,7 +44,7 @@ Algoritmo sin_titulo
 			
 			si opcMenu = 5 Entonces
 				resVolver = 2
-				si tipoCredito[j] = 1 o tipoCredito[j] = 2
+				si tipoCredito = 1 o tipoCredito = 2
 					j = j + 1
 				FinSi
 			FinSi
@@ -60,11 +58,11 @@ Algoritmo sin_titulo
 						Imprimir "----------------------------------"
 						Imprimir "1. Automotriz"
 						Imprimir "2. Hipotecaria"
-						Leer tipoCredito[j]
+						Leer tipoCredito
 						
-					Hasta Que tipoCredito[j] > 0 y tipoCredito[j] < 3
+					Hasta Que tipoCredito > 0 y tipoCredito < 3
 					
-					Segun tipoCredito[j]
+					Segun tipoCredito
 						
 						1:
 							Imprimir "ingrese su sueldo"
@@ -84,7 +82,7 @@ Algoritmo sin_titulo
 								Hasta Que credSolicitado[j] >= 10000000 y credSolicitado[j] <= 20000000
 								
 								Imprimir "-------------------------------"
-								Imprimir "El pie a pagar es ", credSolicitado[j] * 0.2
+								Imprimir "El pie a pagar es ", redon(credSolicitado[j] * 0.2)
 								Imprimir "-------------------------------"
 								
 								Repetir
@@ -148,7 +146,7 @@ Algoritmo sin_titulo
 								credSolicitado[j] = credSolicitado[j] * 34353
 								
 								Imprimir "-------------------------------"
-								Imprimir "El pie a pagar es $", credSolicitado[j] * 0.1 
+								Imprimir "El pie a pagar es $", redon(credSolicitado[j] * 0.1)
 								
 								Repetir
 									
@@ -203,12 +201,12 @@ Algoritmo sin_titulo
 					Imprimir apeCliente[j];
 					Imprimir run[j];
 					Imprimir "Credito Solicitado: $",credSolicitado[i];
-					Segun tipoCredito[j]
+					Segun numCuota[j]
 						
-						1:
+						1 o 2:
 							Imprimir "Pie: ", credSolicitado[i] * 0.2
 							
-						2:
+						3 o 4 o 5:
 							imprimir "Pie: ", credSolicitado[i] * 0.1
 							
 					FinSegun
@@ -253,15 +251,62 @@ Algoritmo sin_titulo
 					FinSegun
 					
 				3:
+					Imprimir "------------------------------------------"
+					Imprimir "Clientes"
 					Para i = 0 Hasta 4 Hacer
-						Imprimir "------------------------------------------"
-						Imprimir "Nombre y apellido: ",nomCliente[i]," ", apeCliente[i]
-						Imprimir "RUT: ", run[i]
-						Imprimir "--------------------------------------------"
+						
+						si nomCliente[i] <> "" Entonces
+							Imprimir "------------------------------------------"
+							Imprimir "Nombre y apellido: ",nomCliente[i]," ", apeCliente[i]
+							Imprimir "RUT: ", run[i]
+						FinSi
+						
 					FinPara
 					
 				4:
+					Repetir
+						Imprimir "Buscar por:"
+						Imprimir "1. Nombre"
+						Imprimir "2. Apellido"
+						Imprimir "3. Run"
+						Leer opcBuscar
+					Hasta Que opcBuscar > 0 y opcBuscar < 4
 					
+					Segun opcBuscar
+						
+						1:
+							imprimir "Ingrese nombre"
+							leer comparador
+							
+							Para i = 0 Hasta 4 Con Paso 1
+								si nombre = nomCliente[i]
+									Imprimir "Cliente encontrado"
+								FinSi
+								
+							FinPara
+							
+						2:
+							imprimir "Ingrese apellido"
+							leer comparador
+							
+							Para i = 0 Hasta 4 Con Paso 1
+								si apellido = apeCliente[i]
+									Imprimir "Cliente encontrado"
+								FinSi
+								
+							FinPara
+							
+						3:
+							imprimir "Run"
+							leer comparador
+							
+							Para i = 0 Hasta 4 Con Paso 1
+								si comparador = run[i]
+									Imprimir "Cliente encontrado"
+								FinSi
+								
+							FinPara
+					FinSegun
 					
 			FinSegun
 			
