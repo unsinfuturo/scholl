@@ -22,7 +22,7 @@ Algoritmo sin_titulo
 		Imprimir "--------------------------------------------------"
 		
 		Imprimir "Ingrese nombre"
-		
+		leer nomcliente[j]
 		Imprimir "Ingrese apellido"
 		leer apeCliente[j]
 		Imprimir "Ingrese Run"
@@ -200,14 +200,14 @@ Algoritmo sin_titulo
 					Imprimir nomCliente[j];
 					Imprimir apeCliente[j];
 					Imprimir run[j];
-					Imprimir "Credito Solicitado: $",credSolicitado[i];
+					Imprimir "Credito Solicitado: $",credSolicitado[j];
 					Segun numCuota[j]
 						
 						1 o 2:
-							Imprimir "Pie: ", credSolicitado[i] * 0.2
+							Imprimir "Pie: ", credSolicitado[j] * 0.2
 							
 						3 o 4 o 5:
-							imprimir "Pie: ", credSolicitado[i] * 0.1
+							imprimir "Pie: ", credSolicitado[j] * 0.1
 							
 					FinSegun
 					
@@ -217,8 +217,8 @@ Algoritmo sin_titulo
 							
 							Imprimir "Tasa de interes: 10%"
 							Imprimir "numero de cuotas: 36"
-							Imprimir "Valor de cuota: $",redon(((credSolicitado[i] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.1)/36)
-							Imprimir "Valor total del credito: $", redon((credSolicitado[i] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.1)
+							Imprimir "Valor de cuota: $",redon(((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.1)/36)
+							Imprimir "Valor total del credito: $", redon((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.1)
 							
 						2:
 							
@@ -306,6 +306,7 @@ Algoritmo sin_titulo
 								FinSi
 								
 							FinPara
+							
 					FinSegun
 					
 			FinSegun
