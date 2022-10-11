@@ -1,14 +1,14 @@
 Algoritmo sin_titulo
 	
-	Definir opcMenu,opcCredito,sue,opcCuota,numCuota,valorCredito,opcBuscar Como Entero
-	Definir nomCliente, apeCliente, Run Como Caracter
+	Definir opcMenu,opcCredito,sue,opcCuota,numCuota,valorCredito,opcBuscar,mostrarInformacion,resVolver Como Entero
+	Definir nomCliente, apeCliente, Run, fecha, comparador Como Caracter
 	
 	Dimension nomCliente[5];
 	Dimension apeCliente[5];
 	Dimension credSolicitado[5];
 	Dimension run[5];
 	Dimension numCuota[5];
-	
+	Dimension fecha[5];
 	j = 0
 	
 
@@ -25,8 +25,10 @@ Algoritmo sin_titulo
 		leer nomcliente[j]
 		Imprimir "Ingrese apellido"
 		leer apeCliente[j]
-		Imprimir "Ingrese Run"
+		Imprimir "Ingrese Run, Con . y - "
 		leer run[j]
+		Imprimir "Fecha actual, Formato DD/MM/AAAA"
+		leer fecha[j]
 		
 		repetir
 			
@@ -65,7 +67,7 @@ Algoritmo sin_titulo
 					Segun tipoCredito
 						
 						1:
-							Imprimir "ingrese su sueldo"
+							Imprimir "Ingrese su sueldo"
 							leer sue
 							
 							si sue >= 1000000 Entonces
@@ -82,7 +84,7 @@ Algoritmo sin_titulo
 								Hasta Que credSolicitado[j] >= 10000000 y credSolicitado[j] <= 20000000
 								
 								Imprimir "-------------------------------"
-								Imprimir "El pie a pagar es ", redon(credSolicitado[j] * 0.2)
+								Imprimir "El pie a pagar es $", redon(credSolicitado[j] * 0.2)
 								Imprimir "-------------------------------"
 								
 								Repetir
@@ -200,6 +202,7 @@ Algoritmo sin_titulo
 					Imprimir "Nombre: ", nomCliente[j];
 					Imprimir "Apellido: ",apeCliente[j];
 					Imprimir "Run: ",run[j];
+					Imprimir "Fecha de cotizacion: ",fecha[j]
 					Imprimir "Credito Solicitado: $",credSolicitado[j];
 					Segun numCuota[j]
 						
@@ -259,6 +262,30 @@ Algoritmo sin_titulo
 							Imprimir "------------------------------------------"
 							Imprimir "Nombre y apellido: ",nomCliente[i]," ", apeCliente[i]
 							Imprimir "RUT: ", run[i]
+							Imprimir "Fecha de cotizacion: ",fecha[i]
+							
+							Segun numCuota[i]
+								1:
+									
+									Imprimir "Valor total del credito pedido: $", redon((credSolicitado[i] - credSolicitado[i] * 0.2 ) + credSolicitado[i] * 0.1)
+									
+								2:
+									
+									Imprimir "Valor total del credito pedido: $", redon((credSolicitado[i] - credSolicitado[i] * 0.2 ) + credSolicitado[i] * 0.15)
+									
+								3:
+									
+									Imprimir "Valor total del credito pedido: $", redon((credSolicitado[i] - credSolicitado[i] * 0.2 ) + credSolicitado[i] * 0.25)
+									
+								4:
+									
+									Imprimir "Valor total del credito pedido: $", redon((credSolicitado[i] - credSolicitado[i] * 0.2 ) + credSolicitado[i] * 0.3)
+									
+								5:
+									
+									Imprimir "Valor total del credito pedido: $", redon((credSolicitado[i] - credSolicitado[i] * 0.2 ) + credSolicitado[i] * 0.5)
+									
+							FinSegun
 						FinSi
 						
 					FinPara
@@ -278,9 +305,75 @@ Algoritmo sin_titulo
 							imprimir "Ingrese nombre"
 							leer comparador
 							
-							Para i = 0 Hasta 4 Con Paso 1
-								si nombre = nomCliente[i]
+							Para j = 0 Hasta 4 Con Paso 1
+								si comparador = nomCliente[j]
 									Imprimir "Cliente encontrado"
+									Repetir
+										Imprimir "----------------------------------------"
+										Imprimir "¿Mostrar informacion?"
+										Imprimir "1. SI"
+										Imprimir "2. NO"
+										Leer mostrarInformacion
+										
+									Hasta Que mostrarInformacion = 1 o mostrarInformacion = 2
+									
+									si mostrarInformacion = 1 Entonces
+										Imprimir "Nombre: ", nomCliente[j];
+										Imprimir "Apellido: ",apeCliente[j];
+										Imprimir "Run: ",run[j];
+										Imprimir "Fecha de cotizacion: ",fecha[j];
+										Imprimir "Credito Solicitado: $",credSolicitado[j];
+										Segun numCuota[j]
+											
+											1 o 2:
+												Imprimir "Pie: ", credSolicitado[j] * 0.2
+												
+											3 o 4 o 5:
+												imprimir "Pie: ", credSolicitado[j] * 0.1
+												
+										FinSegun
+										
+										Segun numCuota[j]
+											
+											1:
+												
+												Imprimir "Tasa de interes: 10%"
+												Imprimir "numero de cuotas: 36"
+												Imprimir "Valor de cuota: $",redon(((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.1)/36)
+												Imprimir "Valor total del credito: $", redon((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.1)
+												
+											2:
+												
+												Imprimir "Tasa de interes: 15%"
+												Imprimir "numero de cuotas: 48"
+												Imprimir "Valor de cuota: $",redon(((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.15)/48)
+												Imprimir "Valor total del credito: $", redon((credSolicitado[j] - credSolicitado[i] * 0.2 ) + credSolicitado[j] * 0.15)
+												
+											3:
+												
+												Imprimir "Tasa de interes: 25%"
+												Imprimir "numero de cuotas: 120"
+												Imprimir "Valor de cuota: $",redon(((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.25)/120)
+												Imprimir "Valor total del credito: $", redon((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.25)
+												
+											4:
+												
+												Imprimir "Tasa de interes: 30%"
+												Imprimir "numero de cuotas: 240"
+												Imprimir "Valor de cuota: $",redon(((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.3)/240)
+												Imprimir "Valor total del credito: $", redon((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.3)
+												
+											5:
+												
+												Imprimir "Tasa de interes: 50%"
+												Imprimir "numero de cuotas: 300"
+												Imprimir "Valor de cuota: $",redon(((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.5)/300)
+												Imprimir "Valor total del credito: $", redon((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.5)
+												
+										FinSegun
+										
+									FinSi
+									
 								FinSi
 								
 							FinPara
@@ -289,9 +382,76 @@ Algoritmo sin_titulo
 							imprimir "Ingrese apellido"
 							leer comparador
 							
-							Para i = 0 Hasta 4 Con Paso 1
-								si apellido = apeCliente[i]
+							Para j = 0 Hasta 4 Con Paso 1
+								si comparador = apeCliente[j]
 									Imprimir "Cliente encontrado"
+									
+									Repetir
+										Imprimir "----------------------------------------"
+										Imprimir "¿Mostrar informacion?"
+										Imprimir "1. SI"
+										Imprimir "2. NO"
+										Leer mostrarInformacion
+										
+									Hasta Que mostrarInformacion = 1 o mostrarInformacion = 2
+									
+									si mostrarInformacion = 1 Entonces
+										Imprimir "Nombre: ", nomCliente[j];
+										Imprimir "Apellido: ",apeCliente[j];
+										Imprimir "Run: ",run[j];
+										Imprimir "Fecha de cotizacion: ",fecha[j];
+										Imprimir "Credito Solicitado: $",credSolicitado[j];
+										Segun numCuota[j]
+											
+											1 o 2:
+												Imprimir "Pie: ", credSolicitado[j] * 0.2
+												
+											3 o 4 o 5:
+												imprimir "Pie: ", credSolicitado[j] * 0.1
+												
+										FinSegun
+										
+										Segun numCuota[j]
+											
+											1:
+												
+												Imprimir "Tasa de interes: 10%"
+												Imprimir "numero de cuotas: 36"
+												Imprimir "Valor de cuota: $",redon(((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.1)/36)
+												Imprimir "Valor total del credito: $", redon((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.1)
+												
+											2:
+												
+												Imprimir "Tasa de interes: 15%"
+												Imprimir "numero de cuotas: 48"
+												Imprimir "Valor de cuota: $",redon(((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.15)/48)
+												Imprimir "Valor total del credito: $", redon((credSolicitado[j] - credSolicitado[i] * 0.2 ) + credSolicitado[j] * 0.15)
+												
+											3:
+												
+												Imprimir "Tasa de interes: 25%"
+												Imprimir "numero de cuotas: 120"
+												Imprimir "Valor de cuota: $",redon(((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.25)/120)
+												Imprimir "Valor total del credito: $", redon((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.25)
+												
+											4:
+												
+												Imprimir "Tasa de interes: 30%"
+												Imprimir "numero de cuotas: 240"
+												Imprimir "Valor de cuota: $",redon(((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.3)/240)
+												Imprimir "Valor total del credito: $", redon((credSolicitado[j] - credSolicitado[i] * 0.2 ) + credSolicitado[j] * 0.3)
+												
+											5:
+												
+												Imprimir "Tasa de interes: 50%"
+												Imprimir "numero de cuotas: 300"
+												Imprimir "Valor de cuota: $",redon(((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.5)/300)
+												Imprimir "Valor total del credito: $", redon((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.5)
+												
+										FinSegun
+										
+									FinSi
+									
 								FinSi
 								
 							FinPara
@@ -300,9 +460,74 @@ Algoritmo sin_titulo
 							imprimir "Run"
 							leer comparador
 							
-							Para i = 0 Hasta 4 Con Paso 1
-								si comparador = run[i]
+							Para j = 0 Hasta 4 Con Paso 1
+								si comparador = run[j]
 									Imprimir "Cliente encontrado"
+								FinSi
+								Repetir
+									Imprimir "----------------------------------------"
+									Imprimir "¿Mostrar informacion?"
+									Imprimir "1. SI"
+									Imprimir "2. NO"
+									Leer mostrarInformacion
+									
+								Hasta Que mostrarInformacion = 1 o mostrarInformacion = 2
+								
+								si mostrarInformacion = 1 Entonces
+									Imprimir "Nombre: ", nomCliente[j];
+									Imprimir "Apellido: ",apeCliente[j];
+									Imprimir "Run: ",run[j];
+									Imprimir "Fecha de cotizacion: ",fecha[j];
+									Imprimir "Credito Solicitado: $",credSolicitado[j];
+									Segun numCuota[j]
+										
+										1 o 2:
+											Imprimir "Pie: ", credSolicitado[j] * 0.2
+											
+										3 o 4 o 5:
+											imprimir "Pie: ", credSolicitado[j] * 0.1
+											
+									FinSegun
+									
+									Segun numCuota[j]
+										
+										1:
+											
+											Imprimir "Tasa de interes: 10%"
+											Imprimir "numero de cuotas: 36"
+											Imprimir "Valor de cuota: $",redon(((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.1)/36)
+											Imprimir "Valor total del credito: $", redon((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.1)
+											
+										2:
+											
+											Imprimir "Tasa de interes: 15%"
+											Imprimir "numero de cuotas: 48"
+											Imprimir "Valor de cuota: $",redon(((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.15)/48)
+											Imprimir "Valor total del credito: $", redon((credSolicitado[j] - credSolicitado[i] * 0.2 ) + credSolicitado[j] * 0.15)
+											
+										3:
+											
+											Imprimir "Tasa de interes: 25%"
+											Imprimir "numero de cuotas: 120"
+											Imprimir "Valor de cuota: $",redon(((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.25)/120)
+											Imprimir "Valor total del credito: $", redon((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.25)
+											
+										4:
+											
+											Imprimir "Tasa de interes: 30%"
+											Imprimir "numero de cuotas: 240"
+											Imprimir "Valor de cuota: $",redon(((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.3)/240)
+											Imprimir "Valor total del credito: $", redon((credSolicitado[j] - credSolicitado[i] * 0.2 ) + credSolicitado[j] * 0.3)
+											
+										5:
+											
+											Imprimir "Tasa de interes: 50%"
+											Imprimir "numero de cuotas: 300"
+											Imprimir "Valor de cuota: $",redon(((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.5)/300)
+											Imprimir "Valor total del credito: $", redon((credSolicitado[j] - credSolicitado[j] * 0.2 ) + credSolicitado[j] * 0.5)
+											
+									FinSegun
+									
 								FinSi
 								
 							FinPara
