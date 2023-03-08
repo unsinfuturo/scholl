@@ -1,1 +1,71 @@
+Algoritmo sin_titulo
+	
+	Dimension letras[20]
+	a = 0
+	b = 0
+	c = 0
+	d = 0
+	num1 = 0
+	num2 = 0 
+	final = Falso
+	rep = 0
+	
+	para i=0 Hasta 19 Con Paso 1 Hacer
+		
+		Imprimir "Ingrese letra"
+		leer letras[i]
+		
+	FinPara
+	
+	Mientras final = Falso Hacer
+		
+		Imprimir letras[a],letras[b],letras[c],letras[d], "-" , num1,num2
+		
+		si num1 < 9 Entonces
+			
+			num1 = num1 + 1
+			
+		SiNo
+			
+			num1 = 0
+			num2 = num2 + 1
+			
+		FinSi
+		
+		si num1 = 9 y num2 = 9
+			
+			si b < 19 Entonces
+				
+				b = b + 1
+				
+			SiNo
+				
+				b = 0
+				c = c + 1
+				
+			FinSi
+			
+			si c = 20 Entonces
+				c = 0
+				d = d + 1
+			FinSi
+			
+			si d = 20 Entonces
+				d = 0
+				a = a + 1
+			FinSi
+			
+			si a = 20 Entonces
+				final = Verdadero
+			FinSi
+			
+			num1 = 0
+			num2 = 0
+			
+		Fin si
+		
+	FinMientras
+	
 
+	
+FinAlgoritmo
